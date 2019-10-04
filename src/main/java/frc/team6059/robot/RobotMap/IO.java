@@ -4,8 +4,10 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.Servo;
 
 public class IO {
+    Servo _hatchHook = new Servo(0);
     Compressor _compressor = new Compressor(3);
     DoubleSolenoid _rightPistonSlide = new DoubleSolenoid(3, 0, 1);
     DoubleSolenoid _leftPistonSlide = new DoubleSolenoid(3, 2, 3);
