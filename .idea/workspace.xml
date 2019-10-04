@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d3d9ddd-71cb-4e22-9760-939b120261db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/RobotMap/Arcade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/RobotMap/IO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/RobotMap/Joystick.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/Ball.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/BallFeeder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/DriveTrain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/Elevator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/HatchPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Robot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/BallFeeder.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
