@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Servo;
 
 public class IO {
-    DigitalInput _elevatorHome = new DigitalInput(0); //Elevator
+    DigitalInput _elevatorBottom = new DigitalInput(0); //Elevator
     Servo _hatchHook = new Servo(0); //HatchPanel
     Compressor _compressor = new Compressor(3); //Ball
     DoubleSolenoid _rightPistonSlide = new DoubleSolenoid(3, 0, 1); //Ball
