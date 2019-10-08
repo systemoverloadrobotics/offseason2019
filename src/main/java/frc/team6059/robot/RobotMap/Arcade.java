@@ -13,11 +13,11 @@ public class Arcade {
         return arcadeStick.getPOV(0) == 180 || arcadeStick.getPOV(0) == 135 || arcadeStick.getPOV(0) == 225;
     }
 
-    public static boolean _ballFeederExtend() { return arcadeStick.getRawButton(); } //Ball
+    public static boolean _ballFeederExtend() { return arcadeStick.getRawButton(3); } //Ball
 
-    public static boolean _ballIntake() { return arcadeStick.getRawButton(); } //Ball
+    public static boolean _ballIntake() { return arcadeStick.getRawButton(2); } //Ball
 
-    public static boolean _ballOuttake() { return arcadeStick.getRawButton(); } //Ball
+    public static boolean _ballOuttake() { return arcadeStick.getRawButton(4); } //Ball
 
-    public static boolean _hatchHook() { return arcadeStick.getRawButton(); } //Hatch Hook
+    public static boolean _hatchHook() { return arcadeStick.getRawButton(6); } //Hatch Hook
 }
