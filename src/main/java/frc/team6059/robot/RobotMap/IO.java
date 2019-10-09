@@ -5,7 +5,7 @@ import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 import edu.wpi.first.wpilibj.*;
 
 public class IO {
-    public static Ultrasonic     _distance         = new Ultrasonic(1, 1);
+    public static Ultrasonic     _distance         = new Ultrasonic(1, 2);
     public static DigitalInput   _elevatorBottom   = new DigitalInput(0); //Elevator
     public static Servo          _hatchHook        = new Servo(0); //HatchPanel
     public static Compressor     _compressor       = new Compressor(3); //Ball
