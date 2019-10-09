@@ -3,45 +3,21 @@ package frc.team6059.robot.RobotMap;
 import edu.wpi.first.wpilibj.Joystick;
 
 public class Arcade {
-    private static edu.wpi.first.wpilibj.Joystick arcadeStick = new Joystick(1);
+    private static Joystick arcade = new Joystick(1);
 
-    public static boolean _povUp() {
-        return arcadeStick.getPOV(0) == 0 || arcadeStick.getPOV(0) == 45 || arcadeStick.getPOV(0) == 315;
+    public static boolean _elvUp() { //Elevator
+        return arcade.getPOV(0) == 0 || arcade.getPOV(0) == 45 || arcade.getPOV(0) == 315;
     }
 
-    public static boolean _povDown() {
-        return arcadeStick.getPOV(0) == 180 || arcadeStick.getPOV(0) == 135 || arcadeStick.getPOV(0) == 225;
+    public static boolean _elvDown() { //Elevator
+        return arcade.getPOV(0) == 180 || arcade.getPOV(0) == 135 || arcade.getPOV(0) == 225;
     }
 
-    public static boolean outtakeButton() {
-        return arcadeStick.getRawButton(1);
-    }
+    public static boolean _ballFeederExtend() { return arcade.getRawButton(3); } //Ball
 
-    public static boolean intakeButton() {
-        return arcadeStick.getRawButton(2);
-    }
+    public static boolean _ballIntake() { return arcade.getRawButton(2); } //Ball
 
-    public static boolean intakeExtender() {
-        return arcadeStick.getRawButton(3);
-    }
+    public static boolean _ballOuttake() { return arcade.getRawButton(4); } //Ball
 
-    public static boolean autoAlign() {
-        return arcadeStick.getRawButton(4);
-    }
-
-    public static boolean hatchEct() {
-        return arcadeStick.getRawButton(5);
-    }
-
-    public static boolean compSwitch() {
-        return arcadeStick.getRawButton(6);
-    }
-
-    public static boolean hatch() {
-        return arcadeStick.getRawButton(8);
-    }
-
-    public static double elevatorOn() {
-        return arcadeStick.getRawAxis(3);
-    }
+    public static boolean _hatchHook() { return arcade.getRawButton(6); } //Hatch Hook
 }
