@@ -17,10 +17,10 @@ public class Robot extends TimedRobot {
     @Override
     public void robotPeriodic() {
         //No full auto code is currently planned to be made so all teleop code will be run for both auto and teleop periods
-        ball.onTickUpdate();
-        driveTrain.onTickUpdate();
-        elevator.onTickUpdate();
-        hatchPanel.onTickUpdate();
+        //ball.onTickUpdate();
+        //driveTrain.onTickUpdate();
+        //elevator.onTickUpdate();
+        //hatchPanel.onTickUpdate();
     }
 
     @Override
