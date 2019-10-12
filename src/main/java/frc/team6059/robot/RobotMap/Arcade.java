@@ -20,4 +20,6 @@ public class Arcade {
     public static boolean _ballOuttake() { return arcade.getRawButton(4); } //Ball
 
     public static boolean _hatchHook() { return arcade.getRawButton(6); } //Hatch Hook
+
+    public static boolean _compressor() { return arcade.getRawButton(8); } //Ball
 }
