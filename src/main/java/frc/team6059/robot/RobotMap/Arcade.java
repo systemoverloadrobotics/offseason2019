@@ -15,8 +15,6 @@ public class Arcade {
 
     public static boolean _ballFeederExtend() { return arcade.getRawButton(3); } //Ball
 
-    public static boolean _test2() { return arcade.getRawButton(19); }
-
     public static boolean _ballIntake() { return arcade.getRawButton(2); } //Ball
 
     public static boolean _ballOuttake() { return arcade.getRawButton(4); } //Ball
