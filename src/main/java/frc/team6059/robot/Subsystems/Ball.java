@@ -11,8 +11,8 @@ public class Ball {
     }
 
     public void onTickUpdate() {
-        if(Aracade._compressor()) IO._compressor.Start();
-        else IO._compressor.Stop();
+        if(Arcade._compressor()) IO._compressor.start();
+        else IO._compressor.stop();
         if (Arcade._ballFeederExtend()) this.feederExtend();
         else this.feederRetract();
         if (Arcade._ballIntake() ^ Arcade._ballOuttake()) {
