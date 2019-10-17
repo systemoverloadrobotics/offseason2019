@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d3d9ddd-71cb-4e22-9760-939b120261db" name="Default Changelist" comment="">
+    <list default="true" id="0ec8958b-7068-4098-abeb-32d6f18a7ab3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/RobotMap/Arcade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/RobotMap/Arcade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/RobotMap/IO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/RobotMap/IO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/DriveTrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/DriveTrain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/Elevator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/Elevator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +183,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7d3d9ddd-71cb-4e22-9760-939b120261db" name="Default Changelist" comment="" />
+      <changelist id="0ec8958b-7068-4098-abeb-32d6f18a7ab3" name="Default Changelist" comment="" />
       <created>1567472735881</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
