@@ -24,21 +24,18 @@ public class Ball {
 
     private void feederExtend(){
         IO._rightPistonSlide.set(DoubleSolenoid.Value.kForward);
-        IO._leftPistonSlide.set(DoubleSolenoid.Value.kForward);
     }
     private void feederRetract(){
         IO._rightPistonSlide.set(DoubleSolenoid.Value.kReverse);
-        IO._leftPistonSlide.set(DoubleSolenoid.Value.kReverse);
     }
     private void ballOuttake(){
-        IO._ballIntakeMotor.set(ControlMode.PercentOutput,1);
-        IO._rightFlywheel.set(ControlMode.PercentOutput,1);
-        IO._leftFlywheel.set(ControlMode.PercentOutput,-1);
+        IO._rightFlywheel.set(ControlMode.PercentOutput,.5);
+        IO._leftFlywheel.set(ControlMode.PercentOutput,-.5);
     }
     private void ballIntake(){
-        IO._ballIntakeMotor.set(ControlMode.PercentOutput, -1);
-        IO._rightFlywheel.set(ControlMode.PercentOutput, 1);
-        IO._leftFlywheel.set(ControlMode.PercentOutput, -1);
+        IO._ballIntakeMotor.set(ControlMode.PercentOutput, -.5);
+        IO._rightFlywheel.set(ControlMode.PercentOutput, .5);
+        IO._leftFlywheel.set(ControlMode.PercentOutput, -.5);
     }
     private void wheelStop(){
         IO._ballIntakeMotor.set(ControlMode.PercentOutput, 0);

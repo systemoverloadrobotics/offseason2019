@@ -11,8 +11,8 @@ import frc.team6059.robot.RobotMap.*;
 
 public class DriveTrain {
     // Adjustable Parameters
-    static double SpeedMultiplier = 0.4;    // Max Speed
-    static double RotationMultiplier = 0.4;  // Max Rotation.
+    static double SpeedMultiplier = .75;    // Max Speed
+    static double RotationMultiplier = 1;  // Max Rotation.
     // End of Adjustable Parameters
 
     // Other Constants

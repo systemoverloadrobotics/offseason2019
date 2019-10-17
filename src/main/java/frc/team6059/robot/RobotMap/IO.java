@@ -19,7 +19,7 @@ public class IO {
     public static WPI_VictorSPX  _elevatorMotor     = new WPI_VictorSPX(8); //Elevator
     public static WPI_VictorSPX  _ballIntakeMotor   = new WPI_VictorSPX(9); //Ball
     public static WPI_VictorSPX  _rightFlywheel     = new WPI_VictorSPX(10); //Ball
-    public static WPI_VictorSPX  _leftFlywheel      = new WPI_VictorSPX(11); //Ball
+    public static WPI_VictorSPX  _leftFlywheel      = new WPI_VictorSPX(12); //Ball
 
 
     public IO() {

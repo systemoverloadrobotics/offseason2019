@@ -14,9 +14,9 @@ public class Elevator {
             if (Arcade._elvUp()) {
                 IO._elevatorMotor.set(ControlMode.PercentOutput, -.5);
             } else if (Arcade._elvDown()) {
-                IO._elevatorMotor.set(ControlMode.PercentOutput, .1);
+                IO._elevatorMotor.set(ControlMode.PercentOutput, .2);
             } else {
-                IO._elevatorMotor.set(ControlMode.PercentOutput, -.1);
+                IO._elevatorMotor.set(ControlMode.PercentOutput, -.15);
             }
         } else {
             IO._elevatorMotor.set(ControlMode.PercentOutput, 0);
