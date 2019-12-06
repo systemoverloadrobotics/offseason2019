@@ -19,8 +19,13 @@ public class HatchPanel {
      * checks button status
      */
     public void onTickUpdate() {
+        boolean button = Arcade._ballIntake();
 
-        boolean button = Arcade._hatchHook();
+        if (Arcade._compressor()) {
+            IO._compressor.start();
+        } else {
+            IO._compressor.stop();
+        }
 
         if (button) {
             mServo.setAngle(90);

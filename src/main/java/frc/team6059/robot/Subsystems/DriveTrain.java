@@ -8,23 +8,12 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.team6059.robot.RobotMap.*;
 
 
-
 public class DriveTrain {
     // Adjustable Parameters
-    static double SpeedMultiplier = 0.4;    // Max Speed
-    static double RotationMultiplier = 0.4;  // Max Rotation.
+    //static double SpeedMultiplier = .75;    // Max Speed
+    //static double RotationMultiplier = 0.65;  // Max Rotation.
     // End of Adjustable Parameters
-
-    // Other Constants
-    static double SpeedReductionConstant = 0.5;  // Cut speed in 1/2 speedReduction is enabled.
-    static double Kp = -0.1f;  // Proportional control constant.
-    static double min_command = 0.05f;   // minimum rotation.
-    // End of Other Constants.
-
-
     DifferentialDrive _RobotDrive;
-
-
 
     public DriveTrain() {
         _RobotDrive = new DifferentialDrive(IO._frontLeftDrive, IO._frontRightDrive);
@@ -40,43 +29,25 @@ public class DriveTrain {
     }
 
     public void onTickUpdate() {
-        if(Flightstick._autoAlign()) {
-            autoAlign();
-        }
-        else{
-            double sp = Flightstick._driveForward() * SpeedMultiplier;
-            double rt = Flightstick._driveRotation() * RotationMultiplier;
-            _RobotDrive.arcadeDrive(speedDecrease(sp), rt);
-        }
-
+        double sp = Flightstick._driveForward(); //REMOVED SPEEDMULITPLIER
+        double rt = Flightstick._driveRotation(); //REMOVED SPEEDMULITPLIER
+        _RobotDrive.arcadeDrive(speedDecrease(sp), speedDecrease(rt));
     }
 
     public double speedDecrease(double x) {
-        if(Flightstick._speedReduction()){
-            return x * 0.5;
-        }
-        else{
+        if (Flightstick._speedReduction()) {
+            return x * 0.45;
+        } else if (Flightstick._maxSpeed()) {
             return x;
+        } else {
+            return x * .75;
         }
     }
-
-    public double autoAlign() {
-
-        double offset = NetworkTableInstance.getDefault().getTable("limelight").getEntry("tx").getDouble(0);
-
-        double heading_error = -offset  / 29.8; // LL2:  offset will be a number between -29.8 and 29.8 -- offset will  range from -1 to 1
-        double steering_adjust = Kp * offset;
-        if (offset > 0)
-        {
-            steering_adjust = Kp*heading_error - min_command;
-        }
-        else if (offset < 0)
-        {
-            steering_adjust = Kp*heading_error + min_command;
-        }
-        _RobotDrive.arcadeDrive(Flightstick._driveForward() * SpeedMultiplier, steering_adjust);
-
-
-        return 0;
-    }
+//    public double speedDecrease(double x) {
+//        if(Flightstick._speedReduction()){
+//            return x * 0.75;
+//        }
+//        else {
+//            return x;
+//        }
 }

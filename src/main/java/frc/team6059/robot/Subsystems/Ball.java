@@ -1,46 +1,52 @@
 package frc.team6059.robot.Subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.NeutralMode;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import frc.team6059.robot.RobotMap.*;
 
 public class Ball {
 
     public Ball() {
-
+        IO._rightFlywheel.setNeutralMode(NeutralMode.Brake);
+        IO._leftFlywheel.setNeutralMode(NeutralMode.Brake);
     }
 
     public void onTickUpdate() {
-        if(Arcade._compressor()) IO._compressor.start();
-        else IO._compressor.stop();
-        if (Arcade._ballFeederExtend()) this.feederExtend();
-        else this.feederRetract();
-        if (Arcade._ballIntake() ^ Arcade._ballOuttake()) {
-            if (Arcade._ballIntake()) this.ballIntake();
-            else this.ballOuttake();
+        if (Arcade._ballFeederExtend()) {
+            IO._rightPistonSlide.set(DoubleSolenoid.Value.kForward);
+            IO._ballIntakeMotor.set(ControlMode.PercentOutput, .5);
+            IO._rightFlywheel.set(ControlMode.PercentOutput, .5);
+            IO._leftFlywheel.set(ControlMode.PercentOutput, -.5);
+        } else if (Arcade._ballOuttake()) {
+            IO._rightPistonSlide.set(DoubleSolenoid.Value.kReverse);
+            IO._ballIntakeMotor.set(ControlMode.PercentOutput, .5);
+            IO._rightFlywheel.set(ControlMode.PercentOutput, .2);
+            IO._leftFlywheel.set(ControlMode.PercentOutput, -.2);
+        } else if (Arcade._elvOn()) {
+           // IO._rightPistonSlide.set(DoubleSolenoid.Value.kForward);
+            IO._ballIntakeMotor.set(ControlMode.PercentOutput, 0);
+            IO._rightFlywheel.set(ControlMode.PercentOutput, -.5);
+            IO._leftFlywheel.set(ControlMode.PercentOutput, .5);
+        } else if (Arcade._hatchHook()) {
+            IO._rightPistonSlide.set(DoubleSolenoid.Value.kForward);
+            IO._ballIntakeMotor.set(ControlMode.PercentOutput, 0);
+            IO._rightFlywheel.set(ControlMode.PercentOutput, .5);
+            IO._leftFlywheel.set(ControlMode.PercentOutput, -.5);
+        } else if (Arcade._extendIntake()) {
+            IO._rightPistonSlide.set(DoubleSolenoid.Value.kReverse);
+            IO._ballIntakeMotor.set(ControlMode.PercentOutput, 0);
+            IO._rightFlywheel.set(ControlMode.PercentOutput, 0);
+            IO._leftFlywheel.set(ControlMode.PercentOutput, 0);
+        } else if (Arcade._extendIn() == 1){
+            IO._rightPistonSlide.set(DoubleSolenoid.Value.kReverse);
+            IO._ballIntakeMotor.set(ControlMode.PercentOutput, 0);
+            IO._rightFlywheel.set(ControlMode.PercentOutput, .5);
+            IO._leftFlywheel.set(ControlMode.PercentOutput, -0.5);
         }
-        else this.wheelStop();
-    }
-
-    private void feederExtend(){
-        IO._rightPistonSlide.set(DoubleSolenoid.Value.kForward);
-    }
-    private void feederRetract(){
-        IO._rightPistonSlide.set(DoubleSolenoid.Value.kReverse);
-    }
-    private void ballOuttake(){
-        IO._ballIntakeMotor.set(ControlMode.PercentOutput,0.5);
-        IO._rightFlywheel.set(ControlMode.PercentOutput,0.5);
-        IO._leftFlywheel.set(ControlMode.PercentOutput,-0.5);
-    }
-    private void ballIntake(){
-        IO._ballIntakeMotor.set(ControlMode.PercentOutput, -0.5);
-        IO._rightFlywheel.set(ControlMode.PercentOutput, 0.5);
-        IO._leftFlywheel.set(ControlMode.PercentOutput, -0.5);
-    }
-    private void wheelStop(){
-        IO._ballIntakeMotor.set(ControlMode.PercentOutput, 0);
-        IO._rightFlywheel.set(ControlMode.PercentOutput, 0);
-        IO._leftFlywheel.set(ControlMode.PercentOutput, 0);
     }
 }
+//IO._rightPistonSlide.set(DoubleSolenoid.Value.kReverse);
+//        IO._ballIntakeMotor.set(ControlMode.PercentOutput, .5);
+//        IO._rightFlywheel.set(ControlMode.PercentOutput, .5);
+//        IO._leftFlywheel.set(ControlMode.PercentOutput, -.5);

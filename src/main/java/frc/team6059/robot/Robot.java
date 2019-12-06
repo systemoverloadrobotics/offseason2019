@@ -1,6 +1,8 @@
 package frc.team6059.robot;
 
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.TimedRobot;
+import frc.team6059.robot.RobotMap.Arcade;
 import frc.team6059.robot.Subsystems.*;
 
 public class Robot extends TimedRobot {
@@ -12,15 +14,16 @@ public class Robot extends TimedRobot {
 
     @Override
     public void robotInit() {
+        CameraServer.getInstance().startAutomaticCapture();
     }
 
     @Override
     public void robotPeriodic() {
         //No full auto code is currently planned to be made so all teleop code will be run for both auto and teleop periods
         ball.onTickUpdate();
-        driveTrain.onTickUpdate();
         elevator.onTickUpdate();
         hatchPanel.onTickUpdate();
+        driveTrain.onTickUpdate();
     }
 
     @Override

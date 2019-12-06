@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="0ec8958b-7068-4098-abeb-32d6f18a7ab3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Robot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/RobotMap/Arcade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/RobotMap/Arcade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/RobotMap/Flightstick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/RobotMap/Flightstick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/RobotMap/IO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/RobotMap/IO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/DriveTrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/DriveTrain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/Elevator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/Elevator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/HatchPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/team6059/robot/Subsystems/HatchPanel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

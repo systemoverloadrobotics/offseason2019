@@ -24,4 +24,8 @@ public class Arcade {
     public static boolean _compressor() { return arcade.getRawButton(8); } //Ball
 
     public static boolean _elvOn() { return arcade.getRawButton(5); }
+
+    public static boolean _extendIntake() { return arcade.getRawButton(1); }  //extend out and intake
+
+    public static double _extendIn() { return arcade.getRawAxis(3); }    //brings in extender
 }
